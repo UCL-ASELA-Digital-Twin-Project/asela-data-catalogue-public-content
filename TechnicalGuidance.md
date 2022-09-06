@@ -39,7 +39,7 @@ Follow the installation instruction for [Docker](https://docs.docker.com/get-doc
 If you are reading this guide online, clone and unzip this repository in a known location on your system (e.g. Desktop). You should have two sub-folders within the main one, `asela_dashboard_app` and `db_for_asela_app`. 
 Open `VSCode` and `File ->Open Folder` select the main folder of the project `asela-docker`. Open a new _Terminal session_ from the menu `Terminal -> New Terminal`.
 
-![VSCode terminal](./img/00_Vscode.gif)
+![VSCode terminal](./images/00_Vscode.gif)
 
 <div class="page"/>
 
@@ -64,7 +64,7 @@ run the following docker command
 docker run --name some-postgis-container --restart always -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -v postgres-data:/var/lib/postgresql/data -d postgis/postgis
 ```
 
-![VSCode Run Postgres Container](./img/01_VScode.gif)
+![VSCode Run Postgres Container](./images/01_VScode.gif)
 
 This command creates and runs a new Docker container named `some-postgis-container`; it restarts the container in case it stops (e.g. reboot of the machine. It is not essential in local environment); it sets the password to the Database `mysecretpassword`; it also exposes the port 5432 of the container; it creates a persistent volume named `postgres-data`. The container is created using the image `postgis/postgis` located on the [Docker Hub](https://registry.hub.docker.com/r/postgis/postgis/). 
 
